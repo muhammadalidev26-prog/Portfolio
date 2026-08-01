@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        (function () {
+            const root = document.documentElement;
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme) {
+                root.classList.add(savedTheme);
+            } else {
+                const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+                root.classList.add(prefersDark ? "dark" : "light");
+            }
+        })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#08103e">
+
+    <!-- SEO -->
+    <title>Muhammad Ali | Frontend Developer & Web Designer</title>
+    <meta name="description"
+        content="Frontend developer specializing in responsive, mobile-first websites built with HTML, CSS, JavaScript, Webflow, and WordPress. Available for freelance projects.">
+    <meta name="keywords"
+        content="Frontend Developer, HTML, CSS, JavaScript, Responsive Web Design, Webflow, WordPress">
+    <meta name="author" content="Muhammad Ali">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://devmuhammadali.netlify.app/">
+
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp previews) -->
+    <meta property="og:title" content="Muhammad Ali | Frontend Developer">
+    <meta property="og:description"
+        content="Muhammad Ali is a frontend web developer specializing in responsive, mobile-first websites built with HTML, CSS, JavaScript, Webflow, and WordPress. Available for freelance projects.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://devmuhammadali.netlify.app/">
+    <meta property="og:image" content="https://devmuhammadali.netlify.app/images/og-preview.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Muhammad Ali | Frontend Developer">
+    <meta name="twitter:description"
+        content="Frontend developer specializing in responsive, mobile-first websites built with HTML, CSS, JavaScript, Webflow, and WordPress.">
+    <meta name="twitter:image" content="https://devmuhammadali.netlify.app/images/og-preview.png">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/icon.svg" type="image/svg+xml">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+        integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav-bar">
+            <h1 class="main-logo">
+                <a href="#">Ali</a>
+            </h1>
+
+            <div class="nav-links-button">
+                <button class="hamburger" id="hamburger-menu" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <ul class="nav-menu">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#skills">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <button class="button toggle-theme" id="theme-toggle">
+                    <i class="fa-solid fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <main class="main">
+        <section class="hero-section">
+            <div class="left">
+                <h1 class="hero-heading">Hi, I'm Muhammad Ali, <span>Web Developer</span> Based in Pakistan</h1>
+                <p>I'm a passionate self-taught developer focused on building clean, user-friendly, and responsive
+                    websites. I specialize in turning creative designs into functional code using pixel-perfect HTML and
+                    CSS.</p>
+                <a class="hire-me button" href="#contact">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span>Hire Me</span>
+                </a>
+
+                <ul class="social-links">
+                    <li>
+                        <a href="https://github.com/muhammadalidev26-prog" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/muhammad-ali-982058427/" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <!-- Facebook -->
+                        <a href="https://web.facebook.com/profile.php?id=61592204827077" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right">
+                <img src="images/hero-image.jpg" alt="Muhammad Ali's, web developer, headshot" height="400">
+            </div>
+        </section>
+        <hr>
+        <section class="about-section" id="about">
+            <h2 class="section-headings">About me</h2>
+            <p>I'm Muhammad Ali, a self-taught web developer
+                from Pakistan. I build responsive, mobile-first websites using HTML, CSS, JavaScript, Webflow, and
+                WordPress. My focus is creating fast, accessible, and user-friendly experiences.</p>
+
+            <h2 class="my-process-heading section-headings">My Process</h2>
+            <div class="my-process cards">
+                <div class="card">
+                    <h3>1. Plan</h3>
+                    <p>Understanding project goals, defining target audience needs, and outlining scope and timelines.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>2. Design</h3>
+                    <p>Creating intuitive user interfaces, wireframes, and visual layouts tailored to your brand
+                        identity.</p>
+                </div>
+                <div class="card">
+                    <h3>3. Develop</h3>
+                    <p>Writing clean, efficient code to turn static visual designs into functional web applications.</p>
+                </div>
+                <div class="card">
+                    <h3>4. Optimize</h3>
+                    <p>Testing performance, ensuring device responsiveness, and fine-tuning for speed and SEO.</p>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="skills-section" id="skills">
+            <h2 class="section-headings">My Skills</h2>
+            <div class="my-skills cards">
+                <div class="card">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                        viewBox="0 0 48 48">
+                        <path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path>
+                        <path fill="#FF6D00" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path>
+                        <path fill="#FFF"
+                            d="M24,25v-4h8.6l-0.7,11.5L24,35.1v-4.2l4.1-1.4l0.3-4.5H24z M32.9,17l0.3-4H24v4H32.9z">
+                        </path>
+                        <path fill="#EEE"
+                            d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="card">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                        viewBox="0 0 48 48">
+                        <path fill="#0277BD" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path>
+                        <path fill="#039BE5" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path>
+                        <path fill="#FFF"
+                            d="M33.1 13L24 13 24 17 28.9 17 28.6 21 24 21 24 25 28.4 25 28.1 29.5 24 30.9 24 35.1 31.9 32.5 32.6 21 32.6 21z">
+                        </path>
+                        <path fill="#EEE"
+                            d="M24,13v4h-8.9l-0.3-4H24z M19.4,21l0.2,4H24v-4H19.4z M19.8,27h-4l0.3,5.5l7.9,2.6v-4.2l-4.1-1.4L19.8,27z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="card">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                        viewBox="0 0 48 48">
+                        <path fill="#ffd600" d="M6,42V6h36v36H6z"></path>
+                        <path fill="#000001"
+                            d="M29.538 32.947c.692 1.124 1.444 2.201 3.037 2.201 1.338 0 2.04-.665 2.04-1.585 0-1.101-.726-1.492-2.198-2.133l-.807-.344c-2.329-.988-3.878-2.226-3.878-4.841 0-2.41 1.845-4.244 4.728-4.244 2.053 0 3.528.711 4.592 2.573l-2.514 1.607c-.553-.988-1.151-1.377-2.078-1.377-.946 0-1.545.597-1.545 1.377 0 .964.6 1.354 1.985 1.951l.807.344C36.452 29.645 38 30.839 38 33.523 38 36.415 35.716 38 32.65 38c-2.999 0-4.702-1.505-5.65-3.368L29.538 32.947zM17.952 33.029c.506.906 1.275 1.603 2.381 1.603 1.058 0 1.667-.418 1.667-2.043V22h3.333v11.101c0 3.367-1.953 4.899-4.805 4.899-2.577 0-4.437-1.746-5.195-3.368L17.952 33.029z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="card">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                        viewBox="0 0 48 48">
+                        <path fill="#fff"
+                            d="M24 4.050000000000001A19.95 19.95 0 1 0 24 43.95A19.95 19.95 0 1 0 24 4.050000000000001Z">
+                        </path>
+                        <path fill="#01579b"
+                            d="M8.001,24c0,6.336,3.68,11.806,9.018,14.4L9.385,17.488C8.498,19.479,8.001,21.676,8.001,24z M34.804,23.194c0-1.977-1.063-3.35-1.67-4.412c-0.813-1.329-1.576-2.437-1.576-3.752c0-1.465,1.471-2.84,3.041-2.84 c0.071,0,0.135,0.006,0.206,0.008C31.961,9.584,28.168,8,24.001,8c-5.389,0-10.153,2.666-13.052,6.749 c0.228,0.074,0.307,0.039,0.611,0.039c1.669,0,4.264-0.2,4.264-0.2c0.86-0.057,0.965,1.212,0.099,1.316c0,0-0.864,0.105-1.828,0.152 l5.931,17.778l3.5-10.501l-2.603-7.248c-0.861-0.046-1.679-0.152-1.679-0.152c-0.862-0.056-0.762-1.375,0.098-1.316 c0,0,2.648,0.2,4.217,0.2c1.675,0,4.264-0.2,4.264-0.2c0.861-0.057,0.965,1.212,0.104,1.316c0,0-0.87,0.105-1.832,0.152l5.891,17.61 l1.599-5.326C34.399,26.289,34.804,24.569,34.804,23.194z M24.281,25.396l-4.8,13.952c1.436,0.426,2.95,0.652,4.52,0.652 c1.861,0,3.649-0.324,5.316-0.907c-0.04-0.071-0.085-0.143-0.118-0.22L24.281,25.396z M38.043,16.318 c0.071,0.51,0.108,1.059,0.108,1.645c0,1.628-0.306,3.451-1.219,5.737l-4.885,14.135C36.805,35.063,40,29.902,40,24 C40,21.219,39.289,18.604,38.043,16.318z">
+                        </path>
+                        <path fill="#01579b"
+                            d="M4,24c0,11.024,8.97,20,19.999,20C35.03,44,44,35.024,44,24S35.03,4,24,4S4,12.976,4,24z M5.995,24 c0-9.924,8.074-17.999,18.004-17.999S42.005,14.076,42.005,24S33.929,42.001,24,42.001C14.072,42.001,5.995,33.924,5.995,24z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="card">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                        viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="20" fill="#1976d2"></circle>
+                        <path fill="#fff"
+                            d="M30.1,21.43c0,0-1.73,5.42-1.86,5.88c-0.05-0.46-1.31-10.2-1.31-10.2c-2.95,0-4.52,2.09-5.35,4.32 c0,0-2.1,5.44-2.27,5.9c-0.01-0.43-0.32-5.84-0.32-5.84c-0.18-2.72-2.66-4.37-4.67-4.37l2.42,14.76c3.09-0.01,4.75-2.1,5.62-4.32 c0,0,1.85-4.8,1.93-5.02c0.02,0.21,1.33,9.34,1.33,9.34c3.09,0,4.76-1.96,5.66-4.1l4.32-10.67C32.54,17.11,30.93,19.2,30.1,21.43z">
+                        </path>
+                    </svg>
+                </div>
+
+            </div>
+
+        </section>
+        <hr>
+        <section class="my-projects-section" id="projects">
+            <h2 class="section-headings">Featured Projects</h2>
+
+            <div class="projects">
+
+                <div class="project">
+                    <div class="project-image">
+                        <img src="images/primelife_clinic.png" alt="Responsive Clinic Website built using HTML and CSS">
+                    </div>
+                    <div class="text">
+                        <p>A clean, professional website designed for a healthcare clinic to improve user experience and
+                            accessibility. Focused on intuitive navigation for patients to find medical services easily.
+                        </p>
+                    </div>
+                    <h3>Technologies Used</h3>
+                    <div class="technologies-used">
+                        <div class="html">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="70" height="70"
+                                viewBox="0 0 48 48">
+                                <path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path>
+                                <path fill="#FF6D00" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path>
+                                <path fill="#FFF"
+                                    d="M24,25v-4h8.6l-0.7,11.5L24,35.1v-4.2l4.1-1.4l0.3-4.5H24z M32.9,17l0.3-4H24v4H32.9z">
+                                </path>
+                                <path fill="#EEE"
+                                    d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="css">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="70" height="70"
+                                viewBox="0 0 48 48">
+                                <path fill="#0277BD" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path>
+                                <path fill="#039BE5" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path>
+                                <path fill="#FFF"
+                                    d="M33.1 13L24 13 24 17 28.9 17 28.6 21 24 21 24 25 28.4 25 28.1 29.5 24 30.9 24 35.1 31.9 32.5 32.6 21 32.6 21z">
+                                </path>
+                                <path fill="#EEE"
+                                    d="M24,13v4h-8.9l-0.3-4H24z M19.4,21l0.2,4H24v-4H19.4z M19.8,27h-4l0.3,5.5l7.9,2.6v-4.2l-4.1-1.4L19.8,27z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://primehealthdemo.netlify.app" target="_blank">Live Demo <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://github.com/muhammadalidev26-prog/Prime-Health-Clinic">GitHub Repo <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-image">
+                        <img src="images/grandview_academy.png"
+                            alt="Responsive Academy Website built using HTML and CSS">
+                    </div>
+                    <div class="text">
+                        <p>A modern, fully responsive multi-page website built from scratch for an educational
+                            institution. Developed without external libraries to master clean, semantic code and layout
+                            structures.</p>
+                    </div>
+                    <h3>Technologies Used</h3>
+                    <div class="technologies-used">
+                        <div class="html">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="70" height="70"
+                                viewBox="0 0 48 48">
+                                <path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path>
+                                <path fill="#FF6D00" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path>
+                                <path fill="#FFF"
+                                    d="M24,25v-4h8.6l-0.7,11.5L24,35.1v-4.2l4.1-1.4l0.3-4.5H24z M32.9,17l0.3-4H24v4H32.9z">
+                                </path>
+                                <path fill="#EEE"
+                                    d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="css">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="70" height="70"
+                                viewBox="0 0 48 48">
+                                <path fill="#0277BD" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path>
+                                <path fill="#039BE5" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path>
+                                <path fill="#FFF"
+                                    d="M33.1 13L24 13 24 17 28.9 17 28.6 21 24 21 24 25 28.4 25 28.1 29.5 24 30.9 24 35.1 31.9 32.5 32.6 21 32.6 21z">
+                                </path>
+                                <path fill="#EEE"
+                                    d="M24,13v4h-8.9l-0.3-4H24z M19.4,21l0.2,4H24v-4H19.4z M19.8,27h-4l0.3,5.5l7.9,2.6v-4.2l-4.1-1.4L19.8,27z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://grandview-academy.netlify.app" target="_blank">Live Demo <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://github.com/muhammadalidev26-prog/grandview_academy_website"
+                            target="_blank">GitHub Repo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="contact-section" id="contact">
+            <h2 class="section-headings">Get in Touch</h2>
+            <p>Have a project in mind or just wanna say hi, my inbox is always open</p>
+            <div class="wrapper">
+                <div class="form">
+                    <form action="" data-netlify="true" name="contact" method="POST">
+                        <label for="name" aria-label="Name"></label>
+                        <input type="text" name="name" id="name" placeholder="Your Name" required>
+
+                        <label for="email" aria-label="Email"></label>
+                        <input type="email" name="email" id="email" placeholder="Your Email" required>
+
+                        <label for="message" aria-label="Message"></label>
+                        <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+
+                        <input type="hidden" name="form-name" value="contact" />
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-details">
+                    <h3>Let's connect</h3>
+                    <p>I'm currently open to new opportunities. Whether you have a question, a project idea or just
+                        wanna say hi - feel free to reach out!</p>
+                    <ul>
+                        <li>
+                            <i class="fa-regular fa-envelope"></i>
+                            <span>Available for freelance</span>
+                        </li>
+                        <li>
+                            <i class="fa-regular fa-clock"></i>
+                            <span>Usually respond within few hours</span>
+                        </li>
+                        <li>
+                            <i class="fa-regular fa-house"></i>
+                            <span>Dokri, Larkana, Pakistan</span>
+                        </li>
+                    </ul>
+                    <hr>
+                    <a href="mailto:muhammadali.dev26@gmail.com" class="email"
+                        target="_blank">muhammadali.dev26@gmail.com <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <hr>
+                    <ul class="contact-links">
+                        <li>
+                            <a href="https://github.com/muhammadalidev26-prog" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <!-- LinkedIn -->
+                            <a href="https://www.linkedin.com/in/muhammad-ali-982058427/" target="_blank">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <!-- Facebook -->
+                            <a href="https://web.facebook.com/profile.php?id=61592204827077" target="_blank">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
